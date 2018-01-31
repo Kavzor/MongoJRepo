@@ -1,0 +1,11 @@
+bin/
+.settings/
+target/generated-sources/
+target/maven-archiver/
+target/maven-status/
+target/test-classes/
+target/dependency-reduced-pom.xml
+pom.xml
+.classpath
+.project
+
