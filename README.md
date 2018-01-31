@@ -23,33 +23,40 @@ Example
 ```java
 
 //Declaring class
-public class User implements MongoDBCritera
-//Code
-  
-//Using the attribute name for finding the entity, any attribute may be used
-@Override
-public SearchCritera getQueryCritera() {
-	return new SearchCritera("name", name);
-}
+public class User implements MongoDBCritera {
+  private String name;
 
-@Override
-public boolean equals(Object object) {
-	User user = (User) object;
-	if(user.getName().equals(this.name)) {
-		return true;
-	}
-	return false;	
-}
-//code
-    
+  public User(String name) {
+    this.name = name;
+  }
+  
+  //Using the attribute name for finding the entity, any attribute may be used
+  @Override
+  public SearchCritera getQueryCritera() {
+    return new SearchCritera("name", name);
+  }
+
+  @Override
+  public boolean equals(Object object) {
+    User user = (User) object;
+    if(user.getName().equals(this.name)) {
+      return true;
+    }
+    return false;	
+  }
+}  
+
 //main
 //using the repo
-Repository<User> userRepo = new MongoDBRepository<>(User.class);
-userRepo.add(new User("Lars");
-userRepo.add(new User("Karl");
+public static void main(String[] args) {
+
+  Repository<User> userRepo = new MongoDBRepository<>(User.class);
+  userRepo.add(new User("Lars");
+  userRepo.add(new User("Karl");
     
-for(User user : userRepo.findAll()) {
-	System.out.println("User's name: " + user.getName());
+  for(User user : userRepo.findAll()) {
+    System.out.println("User's name: " + user.getName());
+  }
 }
 
 ```
