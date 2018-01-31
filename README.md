@@ -4,7 +4,7 @@ Introduction
 Libary meant to ease the setup of a mongodb repository
 
 
-#How to use
+# How to use
 
 Adding to project
 1. Clone or pull down the repositiory.
@@ -17,5 +17,5 @@ Criteras for using MongoJ Repo
 - Entity must implement com.kavzor.mongo.repository.MongoDBCritera
 - Entity must override equals method (to prevent adding the same object twice)
 
-#License
+# License
 [MIT License](https://github.com/Kavzor/MongoJRepo/blob/master/LICENSE)
