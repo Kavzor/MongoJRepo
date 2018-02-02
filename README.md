@@ -1,7 +1,7 @@
 # MongoJRepo
 
 Introduction
-Libary meant to ease the setup of a mongodb repository
+Libary meant to ease the setup of a mongodb repository. The attempt is to abstract away the database-talk and maintain a clean and neat syntax while still offering the user the ability to choose key value for each entity.
 
 
 # How to use
@@ -22,7 +22,7 @@ Criteras for using MongoJ Repo
 Example
 ```java
 
-//Declaring class
+//Declaring entity which has a MongoDBCritera to dermine the key value for each entity
 public class User implements MongoDBCritera {
   private String name;
 
